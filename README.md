@@ -34,7 +34,7 @@ Cole esta frase na conversa:
 Claude, instala a skill que tá nesse repositório pra eu usar em qualquer projeto e confere antes se tá tudo seguro: https://github.com/feBittar/cantos-apple
 ```
 
-O Claude lê o `SKILL.md`, diz o que ele faz e copia o arquivo para `~/.claude/skills/cantos-apple/`. Ele pede a sua permissão antes de baixar e antes de gravar. Se o `/cantos-apple` não aparecer depois, feche e abra o Claude Code. Para instalar à mão, copie o `SKILL.md` para essa pasta.
+O Claude lê o `SKILL.md`, diz o que ele faz e copia o arquivo para `~/.claude/skills/cantos-apple/` (no Windows, a pasta `.claude\skills\cantos-apple\` dentro da sua pasta de usuário). No modo padrão do Claude Code, ele pede a sua permissão antes de baixar e antes de gravar. Se o `/cantos-apple` não aparecer depois, feche e abra o Claude Code. Para instalar à mão, copie o `SKILL.md` para essa pasta. Para desinstalar, apague essa pasta.
 
 A skill é um arquivo de texto só, sem programa junto.
 
@@ -88,7 +88,7 @@ Para só conferir, sem mudar nenhum arquivo:
 - **Quando essa conta dá menos que 4** (o espaço é maior que o raio de fora): o de dentro ficaria quadrado, então ela mantém o de dentro e sobe o de fora. É o caso do exemplo acima.
 - **Quando o de fora não pode mudar** (é o canto da tela do celular, ou um raio que o app inteiro usa): o de dentro fica com um raio mínimo e ela avisa.
 
-Ela não mexe em pílula nem em círculo, em elemento que está longe do canto do pai, nem em imagem que já encosta na borda e é cortada pelo cartão. E muda só raio de canto: cor, tamanho, texto e espaço ficam.
+Ela não mexe em pílula nem em círculo, em elemento que está longe do canto do pai, nem em imagem que já encosta na borda e é cortada pelo cartão. E muda só raio de canto: cor, tamanho e texto ficam. O espaço só muda se você escolher a outra saída que ela oferece.
 
 ## Onde entra a API da Apple
 
@@ -98,7 +98,7 @@ Em projeto SwiftUI com versão mínima iOS 26 (ou macOS 26), o elemento de fora 
 
 - A skill foi testada em três casos pequenos: um cartão em HTML com Tailwind, um em React Native e um em SwiftUI. O código Swift não foi compilado nos testes, porque foram feitos sem Xcode.
 - A curva contínua da Apple (o "squircle") é outro assunto. A skill mantém o que o projeto já usa.
-- Ela aplica a correção sem perguntar quando a regra é clara. Guarde o seu trabalho no git antes de rodar num app inteiro, para poder voltar atrás.
+- Ela aplica a correção sem perguntar quando a regra é clara. Para ver só o relatório antes, use `/cantos-apple só olha, não muda nada`. E guarde o seu trabalho no git antes de rodar num app inteiro, para poder voltar atrás.
 
 ## Fontes
 
